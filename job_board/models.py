@@ -12,6 +12,9 @@ class Job(models.Model):
     company_detail = models.TextField(max_length=100)
     salary = models.IntegerField()
     is_active = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return f"{self.title} | {self.company_detail} | Active: {self.is_active}"
 
 #  makemigrations
 #  instruction how the database table has changed  
